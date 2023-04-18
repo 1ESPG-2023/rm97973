@@ -49,3 +49,4 @@ liElementArray.map((item,key)=>{
 })
 
 
+<!-- div>ul>li*50{item-$} --> - fazendo listona (no html)
