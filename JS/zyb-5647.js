@@ -42,9 +42,9 @@ console.log(liElementArray);
 
 liElementArray.map((item,key)=>{
     if (item.textContent == "item-39") {
-        console.log(`${key+1} - ${item.textContent} `)
+        console.log(`${key+1} - ${item.textContent = "LOCALIZADO"} `)
     }
-    
+// o item 44 kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
 })
 
 

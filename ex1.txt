@@ -1,6 +1,6 @@
 colocando aqui pra ficar certinho e nÃO TER QUE COMENTAR TODA HORA 
 
-const liElement = document.getElementsByTagName("li");
+// const liElement = document.getElementsByTagName("li");
 
 
 // // Forma intelegente de fazer a leitura de uma coleção
@@ -14,7 +14,7 @@ const liElement = document.getElementsByTagName("li");
 // Declaração de arrays
 let nr1 = [1,2,3,4,5,];
 let nr2 = [6,7,8,9,10];
-let nr3 = [nr1,nr2];
+let nr3 = [...nr1,...nr2];
 
 console.log(`Array-1 ${nr1}`);
 console.log(`Array-2 ${nr2}`);
@@ -29,7 +29,23 @@ console.log(`Array-3 ${nr3}`);
 
 nr3.map((numero,key)=>{
     console.log(`Itens do Array - ${(key+1) - numero}`);
-    numero.forEach((digitos)=>{
-        console.log(digitos)
-    });
+    // numero.forEach((digitos)=>{
+    //     console.log(digitos)
+    // });
 })
+
+// convertendo html collection em array de forma indireta
+const liElementHtml = document.getElementsByTagName("li");
+console.log(liElementHtml);
+
+const liElementArray = [...liElementHtml];
+console.log(liElementArray);
+
+liElementArray.map((item,key)=>{
+    if (item.textContent == "item-39") {
+        console.log(`${key+1} - ${item.textContent = "LOCALIZADO"} `)
+    }
+// o item 44 kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+})
+
+
