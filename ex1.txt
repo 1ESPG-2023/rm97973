@@ -51,3 +51,7 @@ liElementArray.map((item,key)=>{
 
 
 <!-- div>ul>li*50{item-$} --> - fazendo listona (no html)
+
+mais nojs depois faço em casa
+
+oba chamada
