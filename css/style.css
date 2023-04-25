@@ -21,16 +21,31 @@
 .container .central{
    flex-grow: 5;
    text-align: center;
+   max-width: fit-content;
+}
+
+.img{
+    width: 100%;
 }
 
 .container .l-e{
     flex-grow: 1;
     background-color: #000000;
     text-align: center;
- }
+}
 
 .container .l-d{
     flex-grow: 1;
     background-color: 	#A9A9A9;
     text-align: center;
- }
+}
+
+.rodape{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 20vh;
+    background-color: burlywood;
+    color: #fff;
+}

@@ -16,11 +16,16 @@ function mudacor() {
     b = Math.round(Math.random() * 255);
     
     const cabecalho = document.querySelector(".cabecalho");
+    const container1 = document.querySelector(".container .l-e");
+    const container2 = document.querySelector(".container .l-d");
+    const rodape = document.querySelector(".rodape");
 
     cabecalho.setAttribute("style", `background-color:rgb(${r},${g},${b})`);
+    container1.setAttribute("style", `background-color:rgb(${r},${g},${b})`);
+    container2.setAttribute("style", `background-color:rgb(${r},${g},${b})`);
+    rodape.setAttribute("style", `background-color:rgb(${r},${g},${b})`);
 
     tmp = setTimeout(mudacor,100);
-
 
 }
 
