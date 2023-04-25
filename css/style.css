@@ -1,3 +1,5 @@
+
+/* Meu seletor no css :)))) */
 .cabecalho{
     display: flex;
     justify-content: center;
@@ -7,24 +9,28 @@
     background-color: burlywood;
     color: #fff;
 }
+
 .container{
     display: flex;
     justify-content: space-between;
     width: 100vw;
     height: 60vh;
-    background-color: pink;
+    background-color: #696969;
 }
+
 .container .central{
    flex-grow: 5;
    text-align: center;
 }
+
 .container .l-e{
     flex-grow: 1;
-    background-color: red;
+    background-color: #000000;
     text-align: center;
  }
+
 .container .l-d{
     flex-grow: 1;
-    background-color: red;
+    background-color: 	#A9A9A9;
     text-align: center;
  }

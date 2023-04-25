@@ -1,20 +1,27 @@
-// function soma(parametro) {
-//     nr1 = 10;
-//     nr2 = 5;
+// mudacor()
 
-//     console.log(`Resultado : ${nr1 + nr2 + parametro}`);
+function mudacor() {
 
-//     console.log(`Este é o parâmetro que foi passado para a função : ${parametro}`);
+    let r = "";
+    let g = "";
+    let b = "";
+
     
-//     return (parseint(nr1) + parseint(nr2) + parseint(parametro));
-// }
+    //random = gera números aleatórios entre 0 e 1
+    //ceil, floor e round que arrendondam o número para cima, baixo ou aleatóriamente
+    
+    //Determinando para a variavél r um valor entre 0 e 255
+    r = Math.round(Math.random() * 255); 
+    g = Math.round(Math.random() * 255);
+    b = Math.round(Math.random() * 255);
+    
+    const cabecalho = document.querySelector(".cabecalho");
 
-// soma();
+    cabecalho.setAttribute("style", `background-color:rgb(${r},${g},${b})`);
 
-// arrow function
-const mudacor = ()=>{
-    // função set time out
-    setTimeout("EXECUTOU",5000);
+    tmp = setTimeout(mudacor,100);
+
+
 }
 
 mudacor();
