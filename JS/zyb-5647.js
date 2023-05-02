@@ -16,3 +16,22 @@ function alteraBanner() {
     setTimeout(alteraBanner, 1000)
     
 }
+
+
+const botao = document.querySelector(".central button");
+
+botao.addEventListener("click", ()=>{
+    function ligaDesliga() {
+
+        const imgLampada = document.querySelector(".cetral img");
+    
+        if(botao.textContent == "Ligar"){
+            imgLampada.src = "../img/pic_bulbon.gif"
+            botao.textContent = "Desligar"
+        }else{
+            imgLampada.src = "../img/pic_bulboff.gif"
+            botao.textContent = "ligar"
+        }
+    
+    }
+});
