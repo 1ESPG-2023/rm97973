@@ -1,43 +1,42 @@
-// Função altera banner 
 
-// function alteraBanner() {
+let tmp = "";
 
-//     const img1 = document.querySelector(".l-e > img")
-//     const img2 = document.querySelector(".l-d > img")
-
-//     let nr = Math.ceil(Math.random() * 3);
-//     let caminho = `../img/banner-lateral-${nr}.png`;
-//     img1.src = caminho;
-
-//     nr = Math.ceil(Math.random() * 3);
-//     caminho = `../img/banner-lateral-${nr}.png`;
-//     img2.src = caminho;
-
-//     setTimeout(alteraBanner, 1000)
+function mudaCor() {
     
-// }
+    let r = "";
+    let g = "";
+    let b = "";
 
+    //random = Gera números aleatórios entre 0 e 1
+    //ceil,floor e round que arredondam o número para cima, para baixo ou aleatóriamente.
 
-// const botao = document.querySelector(".central button");
+    //Determinando para a variável r um valor entre 0 e 255.
+    r = Math.round(Math.random() * 255);
+    g = Math.round(Math.random() * 255);
+    b = Math.round(Math.random() * 255);
 
-// botao.addEventListener("click", ()=>{
-//     function ligaDesliga() {
-
-//         const imgLampada = document.querySelector(".cetral img");
+    const cabecalho = document.querySelector(".cabecalho");
     
-//         if(botao.textContent == "Ligar"){
-//             imgLampada.src = "../img/pic_bulbon.gif"
-//             botao.textContent = "Desligar"
-//         }else{
-//             imgLampada.src = "../img/pic_bulboff.gif"
-//             botao.textContent = "ligar"
-//         }
-    
-//     }
-// });
+    cabecalho.setAttribute("style", `background-color:rgb(${r},${g},${b})`)
+
+    tmp = setTimeout(mudaCor, 1000);
+
+}
 
 const inputUser = document.querySelector("input[name='nmUser']");
+const labelUser = document.querySelector("label[for]");
 
 inputUser.addEventListener("focus", ()=>{
-    inputUser.setAttribute("style", "border: solid 1px #ff0000;");
+    inputUser.setAttribute("style", "outline-color:#ff0000");
+});
+
+inputUser.addEventListener("keyup", ()=>{
+
+    if(inputUser.value.length < 8){
+        inputUser.setAttribute("style", "outline-color:#ff0000");
+        labelUser.setAttribute("style", "color:#ff0000");
+    }else{
+        inputUser.setAttribute("style", "outline-color:#dddddd");
+        labelUser.setAttribute("style", "color:#00ff00");
+    }
 });

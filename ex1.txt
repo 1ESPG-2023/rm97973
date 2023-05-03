@@ -1,133 +1,163 @@
+Colocando aqui tudo que foi comentado... (no caso o js do professor, mas com os comentários etc, optei por deixar o js limpinho)
 
-// const liElement = document.getElementsByTagName("li");
+// // for (let index = 0; index < liElement.length ; index++) {
+// //     console.log(liElement[index].textContent)
+// // }
+// // // console.log(liElement.length)
 
+// // //Declaração de arrays
+// // let nr1 = [1,2,3,4,5];
+// // let nr2 = [6,7,8,9,10];
+// // // let nr3 = nr1+nr2;
+// // let nr3 = [nr1,nr2];
 
-// // Forma intelegente de fazer a leitura de uma coleção
-// for (let index = 0; index < liElement.length; index++) {
-//     console.log(liElement[index].textContent)
-    
-// }
+// // console.log(`Array-1 ${nr1}`);
+// // console.log(`Array-2 ${nr2}`);
+// // console.log(`Array-3 ${nr3}`);
 
-// // console.log(liElement.length)
+// // //Listando um array! Técnica especial
+// // // nr3.forEach((itemDoaArray)=>{
+// // //     console.log(`Array-3 sendo listado ${itemDoaArray}`);
+// // // })
+// // // Listando o array com MAP
+// // nr3.map((numero,key)=>{
+// //     console.log(`${(key+1)} - Itens do array - ${numero}`);
+// //     numero.forEach((digitos)=>{
+// //         console.log(digitos)
+// //     })
+// // })
 
-// Declaração de arrays
-let nr1 = [1,2,3,4,5,];
-let nr2 = [6,7,8,9,10];
-let nr3 = [...nr1,...nr2];
+// // //Declaração de arrays
+// // let nr1 = [1,2,3,4,5];
+// // let nr2 = [6,7,8,9,10];
+// // //Espalhar o array com SPREAD [ ... ]
+// // let nr3 = [...nr1,...nr2];
 
-console.log(`Array-1 ${nr1}`);
-console.log(`Array-2 ${nr2}`);
-console.log(`Array-3 ${nr3}`);
+// // console.log(`Array-1 ${nr1}`);
+// // console.log(`Array-2 ${nr2}`);
+// // console.log(`Array-3 ${nr3}`);
 
-// Listando o Array - tecnica especial
-// nr3.forEach((itemDoArray)=>{
-    
-// console.log(`Array-3 sendo listado ${nr3}`);    
+// // nr3.map((numero,key)=>{
+// //     console.log(`${(key+1)} - Itens do array - ${numero}`);
 
+// // })
+
+// //Convertendo HTMLCollection em Array de forma indireta
+// const liElementHtml = document.getElementsByTagName("li");
+// const liElementArray = [...liElementHtml];
+
+// liElementArray.map((item,key)=>{
+//     if (item.textContent == "Item-39") {
+//         console.log(`${key+1} - ${item.textContent = "LOCALIZADO"}`)
+//     }
 // })
 
-nr3.map((numero,key)=>{
-    console.log(`Itens do Array - ${(key+1) - numero}`);
-    // numero.forEach((digitos)=>{
-    //     console.log(digitos)
-    // });
-})
-
-// convertendo html collection em array de forma indireta
-const liElementHtml = document.getElementsByTagName("li");
-console.log(liElementHtml);
-
-const liElementArray = [...liElementHtml];
-console.log(liElementArray);
-
-liElementArray.map((item,key)=>{
-    if (item.textContent == "item-39") {
-        console.log(`${key+1} - ${item.textContent = "LOCALIZADO"} `)
-    }
-// o item 44 kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
-})
-
-
-
-
-<!-- div>ul>li*50{item-$} --> - fazendo listona (no html)
-
-mais nojs depois faço em casa
-
-oba chamada
-
-mais um comentado aqui dnv na aula nova 
-
-// function soma(parametro) {
-//     nr1 = 10;
-//     nr2 = 5;
-
-//     console.log(`Resultado : ${nr1 + nr2 + parametro}`);
-
-//     console.log(`Este é o parâmetro que foi passado para a função : ${parametro}`);
-    
-//     return (parseint(nr1) + parseint(nr2) + parseint(parametro));
+// function soma(p1,p2,p3) {
+//     nr1 = p1;
+//     nr2 = p2;
+//     resultado = parseInt(nr1) + parseInt(nr2) + parseInt(p3)
+//     console.log(`O Resultado é : ${resultado}.`)
+//     return (resultado)
+//     // console.log(`Resultado : ${parseInt(nr1) + parseInt(nr2) + parseInt(parametro)}`);
+//     // console.log(`Este é o parâmetro que foi passado : ${parametro}`);
 // }
 
-// soma();
+// //ARROW FUNCTION
+// const mudaCor = ()=>{
+    
+//     //FUNÇÃO SET-TIME-OUT
+//     setTimeout(soma, 5000, 100,100,100);
+// }
 
-// arrow function
-const mudacor = ()=>{
-    // função set time out
-    setTimeout("EXECUTOU",5000);
-}
+// mudaCor()
 
-mudacor();
+let tmp = "";
 
-
-
-adeus pro gnomo da paz :( - 02/05/23
-
-    // mudacor()
-
-function mudacor() {
-
+function mudaCor() {
+    
     let r = "";
     let g = "";
     let b = "";
 
-    
-    //random = gera números aleatórios entre 0 e 1
-    //ceil, floor e round que arrendondam o número para cima, baixo ou aleatóriamente
-    
-    //Determinando para a variavél r um valor entre 0 e 255
-    r = Math.round(Math.random() * 255); 
+    //random = Gera números aleatórios entre 0 e 1
+    //ceil,floor e round que arredondam o número para cima, para baixo ou aleatóriamente.
+
+    //Determinando para a variável r um valor entre 0 e 255.
+    r = Math.round(Math.random() * 255);
     g = Math.round(Math.random() * 255);
     b = Math.round(Math.random() * 255);
-    
+
     const cabecalho = document.querySelector(".cabecalho");
-    const container1 = document.querySelector(".container .l-e");
-    const container2 = document.querySelector(".container .l-d");
-    const rodape = document.querySelector(".rodape");
+    
+    cabecalho.setAttribute("style", `background-color:rgb(${r},${g},${b})`)
 
-    cabecalho.setAttribute("style", `background-color:rgb(${r},${g},${b})`);
-    container1.setAttribute("style", `background-color:rgb(${r},${g},${b})`);
-    container2.setAttribute("style", `background-color:rgb(${r},${g},${b})`);
-    rodape.setAttribute("style", `background-color:rgb(${r},${g},${b})`);
-
-    tmp = setTimeout(mudacor,100);
+    tmp = setTimeout(mudaCor, 1000);
 
 }
 
-mudacor();
 
-- n sei oq é isso mas a gente apagou e colocou 
+//FUNÇÃO ALTERA BANNER
+// function alteraBanner() {
+    
+    
+//     const img1 = document.querySelector(".l-e > img")
+//     const img2 = document.querySelector(".l-d > img")
+    
+//     let nr = Math.ceil(Math.random() *3);
+//     let caminho = `./img/banner-lateral-${nr}.png`;
+//     img1.src = caminho;
+    
+//     nr = Math.ceil(Math.random() *3);
+//     caminho = `./img/banner-lateral-${nr}.png`;
+//     img2.src = caminho;
 
-function ligaDesliga() {
+//     setTimeout(alteraBanner, 1000);
 
-    const imgLampada = document.querySelector(".cetral img");
+// }
 
-    if(botao.textContent == "Ligar"){
-        imgLampada.src = "../img/pic_bulbon.gif"
-        botao.textContent = "Desligar"
+// alteraBanner();
+
+// const botao = document.querySelector(".central button");
+
+// botao.addEventListener("click" , ()=>{
+//     const imgLampada = document.querySelector(".central img");
+
+//     if(this.textContent == "LIGAR"){
+//         imgLampada.src = "./img/pic_bulbon.gif"
+//         botao.textContent = "DESLIGAR";
+//     }else{
+//         imgLampada.src = "./img/pic_bulboff.gif"
+//         botao.textContent = "LIGAR";
+//     }
+// });
+
+// function ligaDesliga() {
+
+//     const imgLampada = document.querySelector(".central img");
+
+//     if(botao.textContent == "LIGAR"){
+//         imgLampada.src = "./img/pic_bulbon.gif"
+//         botao.textContent = "DESLIGAR";
+//     }else{
+//         imgLampada.src = "./img/pic_bulboff.gif"
+//         botao.textContent = "LIGAR";
+//     }
+// }
+
+const inputUser = document.querySelector("input[name='nmUser']");
+const labelUser = document.querySelector("label[for]");
+
+inputUser.addEventListener("focus", ()=>{
+    inputUser.setAttribute("style", "outline-color:#ff0000");
+});
+
+inputUser.addEventListener("keyup", ()=>{
+
+    if(inputUser.value.length < 8){
+        inputUser.setAttribute("style", "outline-color:#ff0000");
+        labelUser.setAttribute("style", "color:#ff0000");
     }else{
-        imgLampada.src = "../img/pic_bulboff.gif"
-        botao.textContent = "ligar"
+        inputUser.setAttribute("style", "outline-color:#dddddd");
+        labelUser.setAttribute("style", "color:#00ff00");
     }
-
-}
+});

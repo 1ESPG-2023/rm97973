@@ -6,46 +6,26 @@
     align-items: center;
     width: 100vw;
     height: 20vh;
-    background-color: burlywood;
+    background-color: blue;
     color: #fff;
-}
+} 
 
 .container{
     display: flex;
     justify-content: space-between;
     width: 100vw;
-    height: 100%;
-    background-color: #696969;
+    height: auto;
+    background-color: blueviolet;
 }
 
 .container .central{
-   flex-grow: 5;
-   text-align: center;
-   max-width: fit-content;
+    flex-grow: 5;
 }
-
-.img{
-    width: 100%;
-}
-
 .container .l-e{
     flex-grow: 1;
-    background-color: #000000;
-    text-align: center;
+    background-color: brown;
 }
-
 .container .l-d{
     flex-grow: 1;
-    background-color: 	#A9A9A9;
-    text-align: center;
-}
-
-.rodape{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 20vh;
-    background-color: burlywood;
-    color: #fff;
+    background-color: coral;
 }
