@@ -40,3 +40,4 @@ inputUser.addEventListener("keyup", ()=>{
         labelUser.setAttribute("style", "color:#00ff00");
     }
 });
+
