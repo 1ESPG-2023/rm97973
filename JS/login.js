@@ -1,4 +1,21 @@
 
+// Gerando dois objetos no lacalstorage
+const usuario1 = {
+    nomeUsuario:"predo", 
+    senhaUsuario: "12345"
+}
+const usuario2 = {
+    nomeUsuario:"anzina", 
+    senhaUsuario: "12345"
+}
+
+let listaDeUsuarios = [];
+listaDeUsuarios.push(usuario1);
+listaDeUsuarios.push(usuario2);
+
+localStorage.setItem("listaUser", listaDeUsuarios);
+
+
 // Vamos criar um objeto para armazenar o nossso usuário
 const usuario = {
     nomeUsuario:"",
