@@ -8,20 +8,25 @@
     <script src="./JS/login.js"></script>
 </head>
 <body>
+    <h1 id="h1Titulo"></h1>
+
     <div>
-        <form action="index.html" method="get" onsubmit="return false">
+        <form action="iindex.html" method="get" onsubmit="return false">
             <fieldset>
                 <legend>LOGIN</legend>
+                <br>
                 <div>
                     <label for="idUser">Usuário - (Mínimo 8 letras)</label>
                     <input type="text" name="nmUser"  id="idUser" placeholder="Usuário">
                 </div>
+                <br>
                 <div>
                     <label for="idPass">Senha</label>
                     <input type="password" name="txtPass" id="idPass" placeholder="Senha">
                 </div>
+                <br>
                 <div>
-                    <button type="button">LOGIN</button>
+                    <button type="submit" id="btnSubmit">LOGIN</button>
                 </div>
             </fieldset>
         </form>
