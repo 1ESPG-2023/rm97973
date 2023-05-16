@@ -44,7 +44,6 @@ addEventListener("click",(evento)=>{
             lista.forEach((usuario)=> {
                 //VALIDAÇÃO
                 if(inputUserValue == usuario.nomeUsuario && inputPassValue == usuario.senhaUsuario){
-                h1Titulo.innerHTML = "Bem vindo : " + usuario.nomeUsuario;
                 throw "VALIDADO";
                 }else{ 
                     throw "NÃO VALIDADO";
@@ -53,9 +52,11 @@ addEventListener("click",(evento)=>{
         }catch(err){
             if(err == "VALIDADO"){
                 console.log("VALIDADO");
+                h1Titulo.innerHTML = "Bem vindo : " + usuario.nomeUsuario;
             }else{
                 console.log("NÃO VALIDADO");
             }
         }       
     }
 });
+// inner html insere um elemento html dentro do outro html
