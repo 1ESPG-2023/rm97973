@@ -1,46 +1,61 @@
-
-// Gerando dois objetos no lacalstorage
+//GERANDO DOIS OBJETOS NO LOCALSTORAGE
 const usuario1 = {
-    nomeUsuario:"predo", 
-    senhaUsuario: "12345"
+    nomeUsuario:"predo",
+    senhaUsuario:"12345"
 }
+
 const usuario2 = {
-    nomeUsuario:"anzina", 
-    senhaUsuario: "12345"
+    nomeUsuario:"anzina",
+    senhaUsuario:"12345"
 }
 
 let listaDeUsuarios = [];
 listaDeUsuarios.push(usuario1);
 listaDeUsuarios.push(usuario2);
 
-localStorage.setItem("listaUser", listaDeUsuarios);
+localStorage.setItem("listaUser",  JSON.stringify(listaDeUsuarios));
 
 
-// Vamos criar um objeto para armazenar o nossso usuário
-const usuario = {
-    nomeUsuario:"",
-    senhaUsuario:""
-}
+//VAMOS CRIAR UM OBJETO PARA ARMAZENAR O NOSSO USUÁRIO
+// const usuario = {
+//     nomeUsuario:"",
+//     senhaUsuario:""
+// }
+
+
 
 addEventListener("click",(evento)=>{
 
-evento.preventDefault();
+    evento.preventDefault();
 
-    // console.log(evento.target.id == "btnSubmit")
     if(evento.target.id == "btnSubmit"){
         // let usuario = document.querySelector("#idUser").value;
         // let senha = document.querySelector("#idPass").value;
-        usuario.nomeUsuario = document.querySelector("#idUser").value;
-        senha.senhaUsuario = document.querySelector("#idPass").value;
+       
+        // RECUPERANDO DOS IMPUTS
+        let inputUserValue = document.querySelector("#idUser").value;
+        let inputPassValue = document.querySelector("#idPass").value;
         
-        //validação
-        if (usuario.nomeUsuario == "rm97973" && senha.senhaUsuario == "rm97973") {
-            console.log("Validado");
-            const h1Titulo = document.querySelector("#Título");
-            h1.h1Titulo.innerHTML = "Bem Vindo : " = usuario.nomeUsuario;
-        }else{
-            console.log("Não Validou")
-        }
-    }
+        const h1Titulo = document.querySelector("#titulo");
 
+        let lista = JSON.parse(localStorage.getItem("listaUser"));
+        const BreakError = {};
+        try{
+            lista.forEach((usuario)=> {
+                //VALIDAÇÃO
+                if(inputUserValue == usuario.nomeUsuario && inputPassValue == usuario.senhaUsuario){
+                h1Titulo.innerHTML = "Bem vindo : " + usuario.nomeUsuario;
+                throw "VALIDADO";
+                }else{ 
+                    throw "NÃO VALIDADO";
+                }
+            });
+        }catch(err){
+            if(err == "VALIDADO"){
+                console.log("VALIDADO");
+            }else{
+                console.log("NÃO VALIDADO");
+            }
+        }       
+    }
 });
